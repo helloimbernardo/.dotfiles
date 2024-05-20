@@ -62,6 +62,9 @@ echo Git config linked
 mklink /H %HOME_DIR%\.config\fastfetch\config.jsonc fastfetch\config.jsonc
 echo Fastfetch config linked
 
+mklink /H %LOCALAPPDATA%\Programs\oh-my-posh\themes\helloimbernardo.omp.json ohmyposh\helloimbernardo.omp.json
+echo OhMyPosh config linked
+
 echo:
 echo APPS TO INSTALL MANUALLY
 echo:
