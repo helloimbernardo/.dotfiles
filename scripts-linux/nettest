@@ -1,0 +1,6 @@
+# nettest
+# Bernardo Oliveira (helloimbernardo), 2024
+# v 0.1.0
+# todo add array of flags for ping for better management and command line options
+
+nping --count 1 -v -d google.com isep.ipp.pt 1.1.1.1 cloudflare-dns.com

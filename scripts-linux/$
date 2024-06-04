@@ -1,0 +1,3 @@
+"$@"
+# makes commands that start with a '$' character ignore the dollar sign and just execute. 
+# inspired by https://twitter.com/unicodepepper/status/1780712522624156121
