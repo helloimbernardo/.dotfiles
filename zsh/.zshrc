@@ -109,7 +109,11 @@ LC_ALL=en_US.UTF-8
 
 
 # -- ALIASES --
-~/.local/bin/setalias --set
+# sets rc to open zshrc in vim
+alias rc="vim ~/.zshrc"
+
+# sets non-shell specific aliases from ~/.local/bin/setalias
+source ~/.local/bin/setalias
 # --- --- ---
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

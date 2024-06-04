@@ -1,52 +1,26 @@
 # ALIASES
 # helloimbernardo
 
-set_aliases() {
-     # if a second argument is provided, use it as the shell
-    if [ -n "$2" ]; then
-        if [ "$2" == "bash" ]; then
-            alias rc="vim ~/.bashrc"
-        elif [ "$2" == "zsh" ]; then
-            alias rc="vim ~/.zshrc"
-        fi
-    # otherwise, check the current shell
-    else
-        if [[ $SHELL == *"bash"* ]]; then
-            alias rc="vim ~/.bashrc"
-        elif [[ $SHELL == *"zsh"* ]]; then
-            alias rc="vim ~/.zshrc"
-        fi
-    fi
+alias piplup="pokemon-colorscripts -n piplup --no-title"
+alias winex="explorer.exe ."
+alias explorer="nautilus"
+alias neofetch="fastfetch"
+alias lal="ls -al"
 
-    alias piplup="pokemon-colorscripts -n piplup --no-title"
-    alias winex="explorer.exe ."
-    alias explorer="nautilus"
-    alias neofetch="fastfetch"
-    
-    alias win="cd /mnt/c/Users/jb"
+alias win="cd /mnt/c/Users/jb"
 
-    # temporary
-    alias pi="ssh grupo5@grupo5.local"
+# temporary
+alias pi="ssh grupo5@grupo5.local"
 
-    # VIM / NEOVIM
-    alias vi="nvim"
-    alias vim="nvim"
-    alias view="nvim -R"
-    alias vimdiff="nvim -d"
-    alias vimconf="vim ~/.config/nvim/init.lua"
-}
+# VIM / NEOVIM
+alias vi="nvim"
+alias vim="nvim"
+alias view="nvim -R"
+alias vimdiff="nvim -d"
+alias vimconf="vim ~/.config/nvim/init.lua"
 
-usage(){
-    echo "Usage: $0 [--set]"
-    echo "  --set: set the aliases. Shell can be passed as well (ex: $0 --set zsh). If ommitted, the current shell will be used."
-}
-
-if [ "$#" -gt 0 ]; then
-    if [ "$1" = "--set" ]; then
-        set_aliases
-    else
-        usage
-    fi
-else
-    vim $0
+if echo "$SHELL" | grep -q "bash"; then
+    alias rc="vim ~/.bashrc"
+elif echo "$SHELL" | grep -q "zsh"; then
+    alias rc="vim ~/.zshrc"
 fi

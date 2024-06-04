@@ -7,9 +7,13 @@
 
 #  ---- USER CONFIGS ----
 
-# -- SET ALIASES--
-~/.local/bin/setalias --set
-#---- ---- ---- 
+# -- ALIASES --
+# sets rc to open bashrc in vim
+alias rc="vim ~/.bashrc"
+
+# sets non-shell specific aliases from ~/.local/bin/setalias
+source ~/.local/bin/setalias
+# --- --- ---
 
 # -- LOGIN MESSAGE --
 cowsay haiii :3
