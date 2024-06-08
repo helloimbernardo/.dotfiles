@@ -1,0 +1,19 @@
+# newscript - Creates a new script in .dotfiles, symlinks it to ~/.local/bin and opens it for editing
+# helloimbernardo
+
+# set global settings
+directory=~/.dotfiles/scripts-linux
+editor=vim
+
+# if a filename is provided as an argument, use it
+if [ -n "$1" ]; then
+    filename="$1"
+# otherwise, ask for a filename
+else
+    read -p "Please enter a filename: " filename
+    filename="$filename"
+fi
+
+touch "$directory/$filename"
+ln -s "$directory/$filename" ~/.local/bin/"$filename"
+$editor "$directory/$filename"

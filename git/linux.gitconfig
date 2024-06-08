@@ -1,0 +1,13 @@
+[core]
+	editor = vim
+[user]
+	email = 43864475+helloimbernardo@users.noreply.github.com
+	name = Bernardo Oliveira
+	signingkey = 4A777DA01BA52BA149393B224CE4A3061C3C51DC
+[tag]
+	forceSignAnnotated = true
+[commit]
+	gpgsign = true
+[credential "https://github.com"] 
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

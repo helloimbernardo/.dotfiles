@@ -1,0 +1,1 @@
+gnome-text-editor $1 </dev/null &>/dev/null &

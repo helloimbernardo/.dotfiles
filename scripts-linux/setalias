@@ -1,0 +1,26 @@
+# ALIASES
+# helloimbernardo
+
+alias piplup="pokemon-colorscripts -n piplup --no-title"
+alias winex="explorer.exe ."
+alias explorer="nautilus"
+alias neofetch="fastfetch"
+alias lal="ls -al"
+
+alias win="cd /mnt/c/Users/jb"
+
+# temporary
+alias pi="ssh grupo5@grupo5.local"
+
+# VIM / NEOVIM
+alias vi="nvim"
+alias vim="nvim"
+alias view="nvim -R"
+alias vimdiff="nvim -d"
+alias vimconf="vim ~/.config/nvim/init.lua"
+
+if echo "$SHELL" | grep -q "bash"; then
+    alias rc="vim ~/.bashrc"
+elif echo "$SHELL" | grep -q "zsh"; then
+    alias rc="vim ~/.zshrc"
+fi

@@ -7,3 +7,6 @@ Currently, it includes configurations for:
 - powershell
 - winget
 - windows terminal (needs to be done manually)
+- zsh
+- bash
+- linux scripts
