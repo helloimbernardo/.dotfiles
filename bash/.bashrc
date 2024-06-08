@@ -7,6 +7,9 @@
 
 #  ---- USER CONFIGS ----
 
+# try to correct mispellings
+setopt correct
+
 # -- ALIASES --
 # sets rc to open bashrc in vim
 alias rc="vim ~/.bashrc"
@@ -27,7 +30,6 @@ echo "welcome!"
 # -- SET PATHS --
 export PATH="$PATH:$HOME/.local/bin:/opt/nvim/bin"
 # ---- ---- ----
-
 
 
 
