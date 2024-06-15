@@ -65,6 +65,13 @@ echo Fastfetch config linked
 mklink /H %LOCALAPPDATA%\Programs\oh-my-posh\themes\helloimbernardo.omp.json ohmyposh\helloimbernardo.omp.json
 echo OhMyPosh config linked
 
+@REM target directories must exist before creating symbolic links
+mkdir %LOCALAPPDATA%\nvim
+mkdir %LOCALAPPDATA%\nvim\lua
+mklink /H %LOCALAPPDATA%\nvim\init.lua nvim\init.lua
+mklink /H %LOCALAPPDATA%\nvim\lua\plugins.lua nvim\lua\plugins.lua
+echo Neovim config linked
+
 echo:
 echo APPS TO INSTALL MANUALLY
 echo:
