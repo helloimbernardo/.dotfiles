@@ -36,7 +36,6 @@ export PATH="$PATH:$HOME/.local/bin:/opt/nvim/bin"
 
 
 
-
 # --------------------------------------------
 
 # If not running interactively, don't do anything
