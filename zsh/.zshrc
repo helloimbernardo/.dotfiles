@@ -107,26 +107,40 @@ LC_ALL=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+
+
+# -- -- USER CONFIGS -- --
+
+autoload -U add-zsh-hook
 
 # -- ALIASES --
-
-source ~/scripts/functions
-
 # sets rc to open zshrc in vim
 alias rc="vim ~/.zshrc"
 
 # sets non-shell specific aliases from ~/.local/bin/setalias
 source ~/.local/bin/setalias
-# --- --- ---
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# uses functions for commands too compplicated to run as an alias
+source ~/scripts/functions
+
 
 # -- LOGIN MESSAGE --
 cowsay haiii :3
 echo "welcome!"
 ~/.local/bin/scripts
 # necessary because local binaries are not loaded by the time this is executed
-# --- --- ---
+
+
+# -- RUN .dirrc ON DIRECTORY LOAD --
+chpwd_hook() {
+    local dirrc_file=".dirrc"
+    if [ -f "$dirrc_file" ]; then
+        source "$dirrc_file"
+    fi
+}
+add-zsh-hook chpwd chpwd_hook
 
 
 # -- SET PATHS --
