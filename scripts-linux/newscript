@@ -15,5 +15,6 @@ else
 fi
 
 touch "$directory/$filename"
+chmod +x "$directory/$filename"
 ln -s "$directory/$filename" ~/.local/bin/"$filename"
 $editor "$directory/$filename"

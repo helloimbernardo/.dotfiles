@@ -6,6 +6,8 @@ alias winex="explorer.exe ."
 alias explorer="nautilus"
 alias neofetch="fastfetch"
 alias lal="ls -al"
+alias search='fd -I '
+alias searchall='fd -HI '
 
 alias dfiles="cd ~/.dotfiles"
 
@@ -20,9 +22,3 @@ alias vim="nvim"
 alias view="nvim -R"
 alias vimdiff="nvim -d"
 alias vimconf="vim ~/.config/nvim/init.lua"
-
-if echo "$SHELL" | grep -q "bash"; then
-    alias rc="vim ~/.bashrc"
-elif echo "$SHELL" | grep -q "zsh"; then
-    alias rc="vim ~/.zshrc"
-fi

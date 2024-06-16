@@ -109,6 +109,9 @@ LC_ALL=en_US.UTF-8
 
 
 # -- ALIASES --
+
+source ~/scripts/functions
+
 # sets rc to open zshrc in vim
 alias rc="vim ~/.zshrc"
 

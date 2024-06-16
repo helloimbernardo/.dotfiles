@@ -1,0 +1,9 @@
+search() {
+  echo "searching files (including ignored)"
+  fd -I "$@"
+}
+
+searchall() {
+  echo "searching files (including ignored and hidden)"
+  fd -HI "$@"
+}

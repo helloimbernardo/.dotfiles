@@ -7,6 +7,8 @@
 
 #  ---- USER CONFIGS ----
 
+source ~/scripts/functions
+
 # try to correct mispellings
 setopt correct
 
