@@ -6,5 +6,6 @@ echo "tldr -> better documentation"
 echo "vimdiff -> compare two files"
 echo ":Telescope find_files -> find files on vim"
 echo "nettest -> test network connection to a few hosts"
-
+echo
+echo "newscript -> make new script"
 echo "scripts -> open this guide"
