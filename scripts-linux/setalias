@@ -6,8 +6,6 @@ alias winex="explorer.exe ."
 alias explorer="nautilus"
 alias neofetch="fastfetch"
 alias lal="ls -al"
-alias search='fd -I '
-alias searchall='fd -HI '
 
 alias dfiles="cd ~/.dotfiles"
 
