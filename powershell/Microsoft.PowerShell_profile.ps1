@@ -11,3 +11,10 @@ oh-my-posh init pwsh --config 'C:\Users\jb\AppData\Local\Programs\oh-my-posh\the
 New-Alias neofetch fastfetch
 New-Alias vim nvim
 New-Alias vi nvim
+
+New-Alias rc Edit-Profile
+New-Alias scripts C:\Users\jb\Documents\Apps\bin\scripts.ps1
+
+function Edit-Profile {
+    vim $PROFILE
+}

@@ -73,6 +73,17 @@ mklink /H %LOCALAPPDATA%\nvim\lua\plugins.lua nvim\lua\plugins.lua
 echo Neovim config linked
 
 echo:
+echo LINKING SCRIPTS
+echo:
+
+@REM target directories must exist before creating symbolic links
+mkdir %USERPROFILE%\Documents\Apps\
+mkdir %USERPROFILE%\Documents\Apps\bin
+
+mklink /H %USERPROFILE%\Documents\Apps\bin\scripts.ps1 scripts-windows\scripts.ps1
+echo scripts copied
+
+echo:
 echo APPS TO INSTALL MANUALLY
 echo:
 
