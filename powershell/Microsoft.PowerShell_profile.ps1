@@ -18,3 +18,8 @@ New-Alias scripts C:\Users\jb\Documents\Apps\bin\scripts.ps1
 function Edit-Profile {
     vim $PROFILE
 }
+
+# -- temporary alias for DAVE IDE projects --
+function dave {
+	cd "C:\Infineon\Tools\DAVE IDE\4.5.0.202105191637\eclipse\workspace"
+}
