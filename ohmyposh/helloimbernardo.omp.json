@@ -64,7 +64,11 @@
           "foreground": "p:white",
           "powerline_symbol": "\ue0b0",
           "properties": {
-            "style": "full"
+            "style": "agnoster",
+            "truncate_to": 3,
+            "mapped_locations": {
+              "C:\\Infineon\\Tools\\DAVE IDE": "DAVE"
+            }
           },
           "style": "powerline",
           "template": " {{ .Path }} ",
