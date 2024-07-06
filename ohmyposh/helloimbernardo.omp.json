@@ -67,7 +67,6 @@
             "style": "agnoster",
             "truncate_to": 3,
             "mapped_locations": {
-              "C:\\Infineon\\Tools\\DAVE IDE": "DAVE"
             }
           },
           "style": "powerline",
