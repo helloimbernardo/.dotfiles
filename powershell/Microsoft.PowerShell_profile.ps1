@@ -1,4 +1,12 @@
-## this file is synced with dotfiles
+## --- this file is synced with dotfiles ---
+
+# --- Autocomplete ---
+# Shows navigable menu of all options when hitting Tab
+Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
+
+# more autocomplete command registering further down on this config file and more info at the link:
+# https://techcommunity.microsoft.com/t5/itops-talk-blog/autocomplete-in-powershell/ba-p/2604524
+
 
 # --- Modules ---
 # gsudo
@@ -33,4 +41,18 @@ function spotify-player {
 		Graphical interface on your command line to control spotify with
 	#>
 	spotify_player.exe
+}
+
+
+# --- AUTOCOMPLETE ARGUMENT COMPLETER REGISTERING ---
+
+# winget completion
+Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
+    param($wordToComplete, $commandAst, $cursorPosition)
+        [Console]::InputEncoding = [Console]::OutputEncoding = $OutputEncoding = [System.Text.Utf8Encoding]::new()
+        $Local:word = $wordToComplete.Replace('"', '""')
+        $Local:ast = $commandAst.ToString().Replace('"', '""')
+        winget complete --word="$Local:word" --commandline "$Local:ast" --position $cursorPosition | ForEach-Object {
+            [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
+        }
 }
