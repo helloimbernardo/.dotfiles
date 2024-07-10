@@ -29,6 +29,10 @@ function Edit-Profile {
     vim $PROFILE
 }
 
+function tux{
+	wsl -d Ubuntu -e zsh
+}
+
 function nebuladownload {
 	<#
 	.SYNOPSIS
