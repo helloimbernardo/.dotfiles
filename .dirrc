@@ -1,0 +1,1 @@
+echo "execute «pwsh.exe -WorkingDirectory '~\Documents\dotfiles' -Command 'git pull'» to pull updates on windows"
