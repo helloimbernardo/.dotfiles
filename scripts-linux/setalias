@@ -8,11 +8,7 @@ alias neofetch="fastfetch"
 alias lal="ls -al"
 
 alias dfiles="cd ~/.dotfiles"
-
 alias win="cd /mnt/c/Users/jb"
-
-# temporary
-alias pi="ssh grupo5@grupo5.local"
 
 # VIM / NEOVIM
 alias vi="nvim"
