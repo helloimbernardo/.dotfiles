@@ -14,7 +14,7 @@ else
     filename="$filename"
 fi
 
-touch "$directory/$filename"
+echo "#!/usr/bin/env zx\nimport 'zx/globals'\n" > "$directory/$filename"
 chmod +x "$directory/$filename"
 ln -s "$directory/$filename" ~/.local/bin/"$filename"
 $editor "$directory/$filename"
