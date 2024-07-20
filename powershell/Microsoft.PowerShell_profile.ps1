@@ -20,13 +20,16 @@ New-Alias neofetch fastfetch
 New-Alias vim nvim
 New-Alias vi nvim
 New-Alias ifconfig ipconfig
-New-Alias spotify spotify-player
-
+New-Alias spotify spotify-player 
 New-Alias rc Edit-Profile
 New-Alias scripts C:\Users\jb\Documents\Apps\bin\scripts.ps1
 
 function Edit-Profile {
     vim $PROFILE
+}
+
+function coding {
+	cd ~\Documents\coding
 }
 
 function tux{
