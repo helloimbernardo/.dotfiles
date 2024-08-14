@@ -5,6 +5,7 @@ echo "tldr -> better documentation"
 echo "vimdiff -> compare two files"
 echo ":Telescope find_files -> find files on vim"
 echo "nettest -> test network connection to a few hosts"
+echo "mkcd -> make directory and cd into it"
 echo "make .dirrc to autorun on directory open"
 echo
 echo "newscript -> make new script"

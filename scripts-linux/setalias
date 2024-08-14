@@ -7,8 +7,11 @@ alias explorer="nautilus"
 alias neofetch="fastfetch"
 alias lal="ls -al"
 
+alias hasan="nohup streamlink -p mpv --player-args '--profile=streamlink-pip' --twitch-low-latency 'twitch.tv/hasanabi' 'best' </dev/null &>/dev/null &"
+
 alias dfiles="cd ~/.dotfiles"
 alias win="cd /mnt/c/Users/jb"
+alias discord-update="~/.local/bin/discord-linux-install/install.sh"
 
 # VIM / NEOVIM
 alias vi="nvim"

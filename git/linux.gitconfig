@@ -1,5 +1,5 @@
 [core]
-	editor = vim
+	editor = nvim
 [user]
 	email = 43864475+helloimbernardo@users.noreply.github.com
 	name = Bernardo Oliveira
@@ -8,6 +8,3 @@
 	forceSignAnnotated = true
 [commit]
 	gpgsign = true
-[credential "https://github.com"] 
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
