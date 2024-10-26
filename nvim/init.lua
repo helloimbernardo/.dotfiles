@@ -23,3 +23,4 @@ require("rose-pine")
 
 -- set rose-pine as the theme
 vim.cmd("colorscheme rose-pine-moon")
+

@@ -8,6 +8,23 @@ searchall() {
   fd -HI "$@"
 }
 
+function clip {
+  if [ "$#" -ne 4 ]; then
+    echo "Usage: vod <start> <end> <url> <output>"
+    
+    if [[ ! $1 =~ ^([0-9]{2}:){0,2}[0-9]{2}$ ]]; then
+      echo "Invalid start time"
+    fi
+    if [[ ! $2 =~ ^([0-9]{2}:){0,2}[0-9]{2}$ ]]; then
+      echo "Invalid end time"
+    
+    fi
+    return
+  fi
+  
+  ffmpeg -ss $1 -to $2 -i $(yt-dlp -g $3) -c copy $4
+}
+
 
 function mkcd {
   if [ ! -n "$1" ]; then

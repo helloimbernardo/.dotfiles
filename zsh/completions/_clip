@@ -1,0 +1,35 @@
+#compdef clip
+
+_clip(){
+    local curcontext="$curcontext" state line
+    typeset -A opt_args
+
+    _arguments \
+        '1: :->start' \
+        '2: :->end' \
+        '3: :->url' \
+        '4: :->output' && return 0
+
+    case $state in
+        start)
+            _message 'start time'
+            ;;
+        end)
+            _message 'end time'
+            ;;
+        url)
+            local -a urls
+            urls=(
+                'https\:\/\/'
+                'https\:\/\/youtube.com\/'
+                'https\:\/\/twitch.tv\/'
+            )
+            _describe 'url' urls
+            ;;
+        output)
+            _message 'output file'
+            ;;
+    esac
+}
+
+_clip
