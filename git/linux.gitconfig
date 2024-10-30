@@ -1,5 +1,6 @@
 [core]
 	editor = nvim
+	autocrlf = input
 [user]
 	email = 43864475+helloimbernardo@users.noreply.github.com
 	name = Bernardo Oliveira
