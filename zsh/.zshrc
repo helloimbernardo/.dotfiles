@@ -33,7 +33,7 @@ add-zsh-hook chpwd chpwd_hook
 
 
 # -- SET PATHS --
-export PATH="$PATH:$HOME/.local/bin:/opt/nvim/bin"
+export PATH="$PATH:$HOME/.local/bin:/opt/nvim/bin:$HOME/.local/share/JetBrains/Toolbox/scripts"
 # ---- ---- ----
 
 export EDITOR='/usr/bin/nvim'
@@ -44,6 +44,12 @@ export VISUAL='/usr/bin/nvim'
 
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/completions
+
+# brew completions
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# bun completions
+[ -s "/home/nardo/.bun/_bun" ] && source "/home/nardo/.bun/_bun"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -152,13 +158,16 @@ LC_ALL=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# bun completions
-[ -s "/home/nardo/.bun/_bun" ] && source "/home/nardo/.bun/_bun"
-
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 export PATH=$PATH:/home/nardo/.spicetify
+
+# fnm
+FNM_PATH="/home/nardo/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/nardo/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
