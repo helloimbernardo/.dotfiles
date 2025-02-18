@@ -1,12 +1,20 @@
 # ALIASES
 # helloimbernardo
 
+# folders
+alias courses="cd ~/Documents/courses"
+alias coding="cd ~/Documents/coding"
+
+alias shelfmaster="cd ~/Documents/courses/dssmv/ShelfMaster"
+
+alias s="kitten ssh"
+alias :q="exit"
 alias piplup="pokemon-colorscripts -n piplup --no-title"
 alias winex="explorer.exe ."
 alias explorer="nautilus"
 alias neofetch="fastfetch"
 alias lal="ls -al"
-alias fetch="echo "" && fastfetch --logo ~/.hidden-files/faces.jpg --logo-width 50 --logo-padding 1"
+alias fetch="echo "" && fastfetch --config ~/.config/fastfetch/fetch.jsonc"
 
 alias hasan="nohup streamlink -p mpv --player-args '--profile=streamlink-pip' --twitch-low-latency 'twitch.tv/hasanabi' 'best' </dev/null &>/dev/null &"
 function pip-video() {nohup mpv --profile=streamlink-pip $1 </dev/null &>/dev/null &}

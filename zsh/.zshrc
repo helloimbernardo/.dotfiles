@@ -1,6 +1,8 @@
 # file synced with .dotfiles
 
 # --- USER CONFIGURATIONS ---
+export TERMINAL=kitty
+export XDG_TERMINAL_EMULATOR=kitty
 
 # -- ALIASES --
 # sets rc to open zshrc in vim
@@ -33,11 +35,17 @@ add-zsh-hook chpwd chpwd_hook
 
 
 # -- SET PATHS --
-export PATH="$PATH:$HOME/.local/bin:/opt/nvim/bin:$HOME/.local/share/JetBrains/Toolbox/scripts"
+export PATH="$PATH:$HOME/.local/bin:/opt/nvim/bin:$HOME/.local/share/JetBrains/Toolbox/scripts:$HOME/.jdks/corretto-21.0.5"
 # ---- ---- ----
 
 export EDITOR='/usr/bin/nvim'
 export VISUAL='/usr/bin/nvim'
+
+# android SDK paths
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 
 
 ## --- OTHER CONFIGURATION ---
@@ -169,5 +177,9 @@ export PATH=$PATH:/home/nardo/.spicetify
 FNM_PATH="/home/nardo/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
   export PATH="/home/nardo/.local/share/fnm:$PATH"
-  eval "`fnm env`"
+  eval "$(fnm env --use-on-cd --version-file-strategy=recursive --shell zsh)"
 fi
+
+source /home/nardo/.config/broot/launcher/bash/br
+
+source /home/nardo/Documents/coding/specimen/_specimen.zsh
